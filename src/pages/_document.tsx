@@ -8,7 +8,7 @@ export default function Document() {
       </Head>
 
       <body className="bg-gray-100 text-base">
-        <main className="p-8 pb-4">
+        <main className="p-6 pb-4">
           <Main />
           <NextScript />
         </main>
