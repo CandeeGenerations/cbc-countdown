@@ -68,11 +68,11 @@ const StartPage = () => {
 
   return (
     <div className="flex flex-col items-center space-y-4">
-      <p className="uppercase text-violet-700 font-bold text-3xl">The next service begins{countdown ? ' in' : ''}</p>
+      <p className="uppercase text-violet-700 font-bold text-xl">The next service begins{countdown ? ' in' : ''}</p>
 
       <p
         className={classNames(
-          'text-violet-900 font-black text-9xl mb-0',
+          'text-violet-900 font-black text-7xl mb-0',
           (countdown?.toLowerCase() || '').includes('day') || !countdown ? '' : 'font-mono',
         )}
       >
