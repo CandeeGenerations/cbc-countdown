@@ -7,7 +7,7 @@ export default function Document() {
         <title>Countdown</title>
       </Head>
 
-      <body className="text-base" style={{backgroundColor: '#621A34'}}>
+      <body className="text-base text-white" style={{backgroundColor: '#621A34'}}>
         <main className="p-6 pb-4">
           <Main />
           <NextScript />
