@@ -13,7 +13,7 @@ const StartPage = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const now = dayjs()
+      const now = dayjs().add(1, day) // TODO : remove after testing
       const serviceTimes = [
         now
           .add((7 - now.day()) % 7, 'day')
