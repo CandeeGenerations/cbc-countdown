@@ -8,7 +8,7 @@ export default function Document() {
       </Head>
 
       <body className="text-base text-white" style={{backgroundColor: '#621A34'}}>
-        <main className="p-6 pb-4">
+        <main className="p-10 pb-4">
           <Main />
           <NextScript />
         </main>
