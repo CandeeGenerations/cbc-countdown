@@ -58,7 +58,7 @@ const StartPage = () => {
         if (duration.hours() > 0) {
           countdownText += `${duration.hours()}:`
         }
-        countdownText += `${duration.format('mm:ss')}`
+        countdownText += `${duration.format('m:ss')}`
         setCountdown(countdownText)
       }
     }, 1000)
