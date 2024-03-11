@@ -40,7 +40,9 @@ const StartPage = () => {
           .second(0)
           .format(),
       ]
-      const upcomingServices = serviceTimes.map(time => dayjs(time)).filter(time => time.isAfter(now))
+      const upcomingServices = serviceTimes
+        .map(time => dayjs(time))
+        .sort((a, b) => (dayjs(a).isAfter(dayjs(b)) ? 1 : -1))
 
       if (upcomingServices.length === 0) {
         setCountdown(undefined)
