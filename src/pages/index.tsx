@@ -49,6 +49,10 @@ const StartPage = () => {
         return
       }
 
+      if (upcomingServices[0].isBefore(now)) {
+        upcomingServices.shift()
+      }
+
       const nextService = upcomingServices[0]
       const duration = dayjs.duration(nextService.diff(now))
 
