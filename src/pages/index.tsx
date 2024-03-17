@@ -59,8 +59,10 @@ const StartPage = () => {
       if (nextService.diff(now, 'day') >= 1) {
         const diff = nextService.diff(now, 'day')
         setCountdown(`${diff} day${diff === 1 ? '' : 's'}`)
+      } else if (duration.hours() > 0) {
+        setCountdown(duration.format('h:mm:ss'))
       } else {
-        setCountdown(duration.format(duration.hours() > 0 ? 'h:mm:ss' : 'm:ss'))
+        setCountdown(duration.format('m:ss'))
       }
     }, 1000)
 
