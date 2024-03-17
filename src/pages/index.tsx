@@ -50,11 +50,13 @@ const StartPage = () => {
         return
       }
 
-      if (upcomingServices[0].isBefore(now)) {
-        upcomingServices.shift()
+      let index = 0
+
+      while (upcomingServices[index].isBefore(now)) {
+        index++
       }
 
-      const nextService = upcomingServices[0]
+      const nextService = upcomingServices[index]
       const duration = dayjs.duration(nextService.diff(now))
 
       if (nextService.diff(now, 'day') >= 1) {
@@ -75,10 +77,10 @@ const StartPage = () => {
       <Head>
         <title>Countdown</title>
       </Head>
-      
+
       <div className="flex flex-col items-center space-y-4">
         <p className="uppercase font-bold text-xl">The next service begins{countdown ? ' in' : ''}</p>
-  
+
         <p
           className={classNames(
             'font-black text-7xl mb-0',
