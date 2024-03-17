@@ -1,6 +1,7 @@
 import dayjs from 'dayjs'
 import duration from 'dayjs/plugin/duration'
 import relativeTime from 'dayjs/plugin/relativeTime'
+import {Head} from 'next/document'
 import {useEffect, useState} from 'react'
 
 dayjs.extend(duration)
