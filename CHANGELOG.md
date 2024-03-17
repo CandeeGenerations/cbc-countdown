@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.4](https://github.com/CandeeGenerations/cbc-countdown/compare/v1.1.3...v1.1.4) (2024-03-17)
+
+
+### Bug Fixes
+
+* a bunch of fixes ([b48b185](https://github.com/CandeeGenerations/cbc-countdown/commit/b48b18546ee873bfc0b449cf0a578fb0bd84eddf))
+
 ### [1.1.3](https://github.com/CandeeGenerations/cbc-countdown/compare/v1.1.2...v1.1.3) (2024-03-14)
 
 
