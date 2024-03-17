@@ -1,6 +1,7 @@
 import dayjs from 'dayjs'
 import duration from 'dayjs/plugin/duration'
 import relativeTime from 'dayjs/plugin/relativeTime'
+import Head from 'next/head'
 import {useEffect, useState} from 'react'
 
 dayjs.extend(duration)
@@ -70,18 +71,24 @@ const StartPage = () => {
   }, [])
 
   return (
-    <div className="flex flex-col items-center space-y-4">
-      <p className="uppercase font-bold text-xl">The next service begins{countdown ? ' in' : ''}</p>
-
-      <p
-        className={classNames(
-          'font-black text-7xl mb-0',
-          (countdown?.toLowerCase() || '').includes('day') || !countdown ? '' : 'font-mono',
-        )}
-      >
-        {countdown || 'Soon'}
-      </p>
-    </div>
+    <>
+      <Head>
+        <title>Countdown</title>
+      </Head>
+      
+      <div className="flex flex-col items-center space-y-4">
+        <p className="uppercase font-bold text-xl">The next service begins{countdown ? ' in' : ''}</p>
+  
+        <p
+          className={classNames(
+            'font-black text-7xl mb-0',
+            (countdown?.toLowerCase() || '').includes('day') || !countdown ? '' : 'font-mono',
+          )}
+        >
+          {countdown || 'Soon'}
+        </p>
+      </div>
+    </>
   )
 }
 
