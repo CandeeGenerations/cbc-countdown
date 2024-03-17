@@ -1,6 +1,7 @@
 import dayjs from 'dayjs'
 import duration from 'dayjs/plugin/duration'
 import relativeTime from 'dayjs/plugin/relativeTime'
+import Head from 'next/head'
 import {useEffect, useState} from 'react'
 
 dayjs.extend(duration)
@@ -49,23 +50,22 @@ const StartPage = () => {
         return
       }
 
-      if (upcomingServices[0].isBefore(now)) {
-        upcomingServices.shift()
+      let index = 0
+
+      while (upcomingServices[index].isBefore(now)) {
+        index++
       }
 
-      const nextService = upcomingServices[0]
+      const nextService = upcomingServices[index]
       const duration = dayjs.duration(nextService.diff(now))
 
       if (nextService.diff(now, 'day') >= 1) {
         const diff = nextService.diff(now, 'day')
         setCountdown(`${diff} day${diff === 1 ? '' : 's'}`)
+      } else if (duration.hours() > 0) {
+        setCountdown(duration.format(`${duration.hours()}:mm:ss`))
       } else {
-        let countdownText = ''
-        if (duration.hours() > 0) {
-          countdownText += `${duration.hours()}:`
-        }
-        countdownText += `${duration.format('m:ss')}`
-        setCountdown(countdownText)
+        setCountdown(duration.format('m:ss'))
       }
     }, 1000)
 
@@ -73,18 +73,24 @@ const StartPage = () => {
   }, [])
 
   return (
-    <div className="flex flex-col items-center space-y-4">
-      <p className="uppercase font-bold text-xl">The next service begins{countdown ? ' in' : ''}</p>
+    <>
+      <Head>
+        <title>Countdown</title>
+      </Head>
 
-      <p
-        className={classNames(
-          'font-black text-7xl mb-0',
-          (countdown?.toLowerCase() || '').includes('day') || !countdown ? '' : 'font-mono',
-        )}
-      >
-        {countdown || 'Soon'}
-      </p>
-    </div>
+      <div className="flex flex-col items-center space-y-4">
+        <p className="uppercase font-bold text-xl">The next service begins{countdown ? ' in' : ''}</p>
+
+        <p
+          className={classNames(
+            'font-black text-7xl mb-0',
+            (countdown?.toLowerCase() || '').includes('day') || !countdown ? '' : 'font-mono',
+          )}
+        >
+          {countdown || 'Soon'}
+        </p>
+      </div>
+    </>
   )
 }
 
