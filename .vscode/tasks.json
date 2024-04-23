@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "dev",
+      "problemMatcher": [],
+      "icon": {
+        "color": "terminal.ansiBlue",
+        "id": "device-desktop"
+      },
+      "label": "Start App",
+      "detail": "NEXT_PUBLIC_APP_VERSION=$npm_package_version next dev -p 4848"
+    },
+    {
+      "type": "npm",
+      "script": "release",
+      "problemMatcher": [],
+      "label": "Release App",
+      "detail": "standard-version -a -- --release-as minor"
+    }
+  ]
+}
