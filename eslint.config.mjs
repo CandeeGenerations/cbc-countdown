@@ -7,7 +7,6 @@ export default [
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   {
-    ignores: ['src/graphql/index.tsx'],
     rules: {
       '@typescript-eslint/ban-ts-comment': 0,
       '@typescript-eslint/no-empty-function': 0,
