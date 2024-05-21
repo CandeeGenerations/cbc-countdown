@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.8](https://github.com/CandeeGenerations/cbc-countdown/compare/v1.1.7...v1.1.8) (2024-05-21)
+
+
+### Bug Fixes
+
+* migrated to eslint v9 ([0cb31ed](https://github.com/CandeeGenerations/cbc-countdown/commit/0cb31edb7d1aacca2beab65d14b056fe4ae41afc))
+* package updates ([c169304](https://github.com/CandeeGenerations/cbc-countdown/commit/c1693048299e74f0141f62738772426d7ea01829))
+
 ### [1.1.7](https://github.com/CandeeGenerations/cbc-countdown/compare/v1.1.6...v1.1.7) (2024-05-06)
 
 
