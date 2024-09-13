@@ -42,7 +42,7 @@ const StartPage = () => {
           .format(),
       ]
       const upcomingServices = serviceTimes
-        .map(time => dayjs(time))
+        .map((time) => dayjs(time))
         .sort((a, b) => (dayjs(a).isAfter(dayjs(b)) ? 1 : -1))
 
       if (upcomingServices.length === 0) {
