@@ -19,6 +19,7 @@
     "eslint": "eslint 'src/**/*.{ts,tsx}'",
     "fix": "pnpm run eslint && pnpm run prettier --cache",
     "preinstall": "npx only-allow pnpm",
+    "install:ci": "pnpm install --ignore-scripts",
     "prepare": "husky",
     "prettier": "prettier --cache --check --write --ignore-unknown .",
     "prettier:ci": "prettier --check .",
