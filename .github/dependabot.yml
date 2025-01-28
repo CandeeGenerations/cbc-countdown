@@ -11,6 +11,9 @@ updates:
       separator: '-' # Use hyphens to separate branch name segments
     schedule:
       interval: 'weekly'
+    ignore:
+      - dependency-name: 'tailwindcss'
+        versions: ['4.x']
     reviewers:
       - 'cgen01'
     groups:
