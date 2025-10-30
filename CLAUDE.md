@@ -55,7 +55,9 @@ The countdown timer (`src/pages/index.tsx`) uses dayjs with duration and relativ
 
 ### Styling
 
-- Uses Tailwind CSS with official plugins (@tailwindcss/aspect-ratio, forms, typography)
+- Uses Tailwind CSS v4 with official plugins (forms, typography)
+- Configuration is CSS-based (in `src/styles/globals.css`) using `@import`, `@plugin`, and `@source` directives
+- PostCSS configuration in `postcss.config.js` uses `@tailwindcss/postcss` plugin
 - Custom brand color: #621A34 (set in \_document.tsx body style)
 - Responsive utility-first styling approach
 
@@ -100,3 +102,8 @@ The countdown timer (`src/pages/index.tsx`) uses dayjs with duration and relativ
 - Commits must follow conventional commit format (commitlint)
 - Pre-commit: Runs lint-staged (prettier, eslint, sort-package-json)
 - Versioning via standard-version (automated CHANGELOG generation)
+
+## Planning and Documentation
+
+- Plan markdown files should be stored in the `plans/` folder
+- Use this folder for migration plans, architecture decisions, and feature planning documents
