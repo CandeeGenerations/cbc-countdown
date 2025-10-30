@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.28](https://github.com/CandeeGenerations/cbc-countdown/compare/v1.1.27...v1.1.28) (2025-10-30)
+
+### Bug Fixes
+
+- package updates and installed claude code ([4cc997d](https://github.com/CandeeGenerations/cbc-countdown/commit/4cc997d2197f816f66ed5475fde78746d28a606f))
+- updated dependabot ([4753991](https://github.com/CandeeGenerations/cbc-countdown/commit/47539913a1c4bebd7e65e2f416f0acf3d1980632))
+- updated tailwindcss to version 4 ([ead50b9](https://github.com/CandeeGenerations/cbc-countdown/commit/ead50b99d0366ecda0f113f74d71c2530ec9cfd6))
+
 ### [1.1.27](https://github.com/CandeeGenerations/cbc-countdown/compare/v1.1.18...v1.1.27) (2025-08-25)
 
 ### 1.1.26 (2025-01-28)
