@@ -22,12 +22,12 @@
     "install:ci": "pnpm install --ignore-scripts",
     "prepare": "husky",
     "prettier": "prettier --cache --check --write --ignore-unknown .",
-    "prettier:ci": "prettier --check .",
+    "prettier:ci": "pnpm exec prettier --check .",
     "release": "standard-version -a -- --release-as minor",
     "start": "fnm use; NEXT_PUBLIC_APP_VERSION=$npm_package_version next start"
   },
   "resolutions": {
-    "js-yaml": "^4.1.1"
+    "lodash": "^4.17.23"
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^5.15.7",
@@ -39,12 +39,12 @@
     "react-dom": "^19.2.4"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.4.0",
-    "@commitlint/config-conventional": "^20.4.0",
+    "@commitlint/cli": "^20.4.1",
+    "@commitlint/config-conventional": "^20.4.1",
     "@eslint/js": "^9.39.2",
     "@tailwindcss/postcss": "^4.1.18",
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
-    "@types/node": "^25.1.0",
+    "@types/node": "^25.2.0",
     "@types/react": "^19.2.10",
     "@types/react-dom": "^19.2.3",
     "eslint": "^9.39.2",
@@ -58,7 +58,7 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.54.0"
   },
-  "packageManager": "pnpm@10.27.0+sha512.72d699da16b1179c14ba9e64dc71c9a40988cbdc65c264cb0e489db7de917f20dcf4d64d8723625f2969ba52d4b7e2a1170682d9ac2a5dcaeaab732b7e16f04a",
+  "packageManager": "pnpm@10.28.2+sha512.41872f037ad22f7348e3b1debbaf7e867cfd448f2726d9cf74c08f19507c31d2c8e7a11525b983febc2df640b5438dee6023ebb1f84ed43cc2d654d2bc326264",
   "engines": {
     "node": ">=22.0.0",
     "pnpm": ">=10.0.0"
