@@ -41,7 +41,7 @@
   "devDependencies": {
     "@commitlint/cli": "^20.4.1",
     "@commitlint/config-conventional": "^20.4.1",
-    "@eslint/js": "^9.39.2",
+    "@eslint/js": "^9.39.3",
     "@tailwindcss/postcss": "^4.1.18",
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
     "@types/node": "^25.2.0",
