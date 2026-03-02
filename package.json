@@ -27,7 +27,7 @@
     "start": "fnm use; NEXT_PUBLIC_APP_VERSION=$npm_package_version next start"
   },
   "resolutions": {
-    "lodash": "^4.17.23"
+    "minimatch": "^9.0.7"
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^5.15.8",
@@ -41,13 +41,13 @@
   "devDependencies": {
     "@commitlint/cli": "^20.4.2",
     "@commitlint/config-conventional": "^20.4.2",
-    "@eslint/js": "^9.39.2",
+    "@eslint/js": "^10.0.1",
     "@tailwindcss/postcss": "^4.2.1",
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
     "@types/node": "^25.3.3",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "eslint": "^9.39.2",
+    "eslint": "^10.0.2",
     "globals": "^17.4.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.3.1",
@@ -58,7 +58,7 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.56.1"
   },
-  "packageManager": "pnpm@10.28.2+sha512.41872f037ad22f7348e3b1debbaf7e867cfd448f2726d9cf74c08f19507c31d2c8e7a11525b983febc2df640b5438dee6023ebb1f84ed43cc2d654d2bc326264",
+  "packageManager": "pnpm@10.30.3+sha512.c961d1e0a2d8e354ecaa5166b822516668b7f44cb5bd95122d590dd81922f606f5473b6d23ec4a5be05e7fcd18e8488d47d978bbe981872f1145d06e9a740017",
   "engines": {
     "node": ">=22.0.0",
     "pnpm": ">=10.0.0"
