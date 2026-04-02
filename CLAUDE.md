@@ -11,7 +11,7 @@ CBC Countdown is a Next.js application that displays a countdown timer to the ne
 ### Setup
 
 - `pnpm install` - Install dependencies (uses pnpm 10.x, required by package manager settings)
-- Prerequisites: Node.js 22.x, pnpm 10.x (install via corepack)
+- Prerequisites: Node.js 4.x, pnpm 10.x (install via corepack)
 
 ### Development
 

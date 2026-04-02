@@ -8,7 +8,7 @@ Countdown to the next service
 
 ### Prerequisites
 
-- Node.js 22.x
+- Node.js 24.x
 - PNPM 10.x
 
 ### Local Setup
