@@ -21,6 +21,7 @@
 
 # typescript
 next-env.d.ts
+tsconfig.tsbuildinfo
 
 .idea
 .env
