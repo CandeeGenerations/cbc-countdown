@@ -1,0 +1,22 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "unicorn", "oxc", "react", "nextjs", "jsx-a11y"],
+  "env": {
+    "builtin": true,
+    "browser": true,
+    "es2024": true
+  },
+  "categories": {
+    "correctness": "error"
+  },
+  "rules": {
+    "no-undef": "error",
+    "prefer-const": "warn",
+    "no-unused-vars": "warn",
+
+    "no-empty-function": "off",
+    "typescript/ban-ts-comment": "off",
+    "typescript/ban-types": "off"
+  },
+  "ignorePatterns": [".next", "node_modules", "next-env.d.ts"]
+}

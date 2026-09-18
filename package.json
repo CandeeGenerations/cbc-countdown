@@ -16,10 +16,11 @@
   "scripts": {
     "build": "NEXT_PUBLIC_APP_VERSION=$npm_package_version next build",
     "dev": "fnm use; NEXT_PUBLIC_APP_VERSION=$npm_package_version next dev -p 4848",
-    "eslint": "eslint 'src/**/*.{ts,tsx}'",
-    "fix": "pnpm run eslint && pnpm run prettier --cache",
+    "fix": "pnpm run lint:fix && pnpm run prettier --cache",
     "preinstall": "npx only-allow pnpm",
     "install:ci": "pnpm install --ignore-scripts",
+    "lint": "oxlint src",
+    "lint:fix": "oxlint src --fix",
     "prepare": "husky",
     "prettier": "prettier --cache --check --write --ignore-unknown .",
     "prettier:ci": "pnpm exec prettier --check .",
@@ -38,22 +39,19 @@
   "devDependencies": {
     "@commitlint/cli": "21.2.2",
     "@commitlint/config-conventional": "21.2.2",
-    "@eslint/js": "^10.0.1",
     "@tailwindcss/postcss": "4.3.3",
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",
     "@types/node": "24.13.5",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
-    "eslint": "10.10.0",
-    "globals": "17.12.0",
     "husky": "^9.1.7",
     "lint-staged": "17.5.1",
+    "oxlint": "1.83.0",
     "prettier": "3.9.7",
     "sort-package-json": "^4.0.0",
     "standard-version": "^9.5.0",
     "tailwindcss": "4.3.3",
-    "typescript": "6.0.3",
-    "typescript-eslint": "^8.70.0"
+    "typescript": "6.0.3"
   },
   "packageManager": "pnpm@12.4.2+sha512.08adc6613180275c7c9edada39dcf08c9c61ad4e7eaf330a4f3461f102b0f907423454d117f98e72d47fef0616070644d7bffc973a6a57f5090a6d7c368b07c9",
   "engines": {

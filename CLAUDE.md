@@ -21,9 +21,10 @@ CBC Countdown is a Next.js application that displays a countdown timer to the ne
 
 ### Code Quality
 
-- `pnpm run eslint` - Run ESLint on TypeScript files in src/
+- `pnpm run lint` - Run oxlint on TypeScript files in src/
+- `pnpm run lint:fix` - Run oxlint with auto-fix
 - `pnpm run prettier` - Check and format all files with Prettier (uses cache)
-- `pnpm run fix` - Run both ESLint and Prettier with auto-fix
+- `pnpm run fix` - Run both oxlint and Prettier with auto-fix
 - `pnpm run prettier:ci` - Check formatting without modifying files (for CI)
 
 ### Release
@@ -71,9 +72,10 @@ The countdown timer (`src/pages/index.tsx`) uses dayjs with duration and relativ
 
 ### Linting
 
-- ESLint with TypeScript support (typescript-eslint)
-- Max line length: 250 characters (warning)
-- Notable rules: no-undef (error), prefer-const (warning), no-unused-vars (warning)
+- oxlint (Rust-based linter) configured in `.oxlintrc.json`
+- Plugins enabled: typescript, unicorn, oxc, react, nextjs, jsx-a11y
+- Category `correctness` is an error; notable rules: no-undef (error), prefer-const (warning), no-unused-vars (warning)
+- Line length is left to Prettier (printWidth 120); oxlint has no `max-len` rule
 - TypeScript strict mode is disabled (tsconfig.json)
 
 ### Path Aliases
@@ -100,7 +102,7 @@ The countdown timer (`src/pages/index.tsx`) uses dayjs with duration and relativ
 
 - Uses Husky for Git hooks
 - Commits must follow conventional commit format (commitlint)
-- Pre-commit: Runs lint-staged (prettier, eslint, sort-package-json)
+- Pre-commit: Runs lint-staged (prettier, oxlint, sort-package-json)
 - Versioning via standard-version (automated CHANGELOG generation)
 
 ## Planning and Documentation
