@@ -11,6 +11,12 @@ updates:
       separator: '-' # Use hyphens to separate branch name segments
     schedule:
       interval: 'monthly'
+    ignore:
+      # muted 2026-09-18 — pinned to the .nvmrc Node major (24, the only Active LTS).
+      # 25.x/26.x run ahead of the runtime. Unmute when Node 26 reaches LTS (~Oct 2026)
+      # and .nvmrc moves. Dashboard #67
+      - dependency-name: '@types/node'
+        update-types: ['version-update:semver-major']
     groups:
       minor-updates:
         update-types:
