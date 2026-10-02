@@ -7,6 +7,9 @@ version: 2
 updates:
   - package-ecosystem: 'npm'
     directory: '/'
+    # CGENovate owns npm version updates; 0 stops version PRs but keeps the ignore list
+    # (mute source of truth) and security updates flowing.
+    open-pull-requests-limit: 0
     pull-request-branch-name:
       separator: '-' # Use hyphens to separate branch name segments
     schedule:
