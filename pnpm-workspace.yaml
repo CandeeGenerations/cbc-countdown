@@ -2,3 +2,6 @@ allowBuilds:
   sharp: true
 minimumReleaseAgeExclude:
   - prettier@3.8.4
+overrides:
+  # GHSA-rj75-hqrm-r3gf (moderate): @tailwindcss/typography pins 6.0.10 exactly
+  postcss-selector-parser@6: '>=6.1.5 <7.0.0'
